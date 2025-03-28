@@ -40,6 +40,7 @@ def count_regions(matrix, is_colorblind=False):
     
     return count
     
+# nvim을 통해 push까지 다 해봄 키키
 if __name__ == '__main__':
     matrix_size = int(input())
     matrix = [list(input()) for _ in range(matrix_size)]
