@@ -37,12 +37,13 @@ def prim_mst(adj_list: set, num_nodes: int, start: int):
 num_nodes, num_edges = map(int, input().split())
 
 adj_list = {}
-for i in range(1, num_edges + 1):
+for i in range(1, num_nodes + 1):
     adj_list[i] = []
 
 for _ in range(num_edges):
     node, next_node, cost = map(int, input().split())
     adj_list[node].append((cost, next_node))
+    adj_list[next_node].append((cost, node))
 
 output = prim_mst(adj_list, num_nodes, 1)
 print(output)
